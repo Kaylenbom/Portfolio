@@ -149,6 +149,10 @@ svg {
   color: var(--first-color);
 }
 
+.section__title span  {
+  color: var(--first-color);
+}
+
 .main {
   overflow: hidden; /* For animation ScrollReveal */
 }
@@ -242,6 +246,11 @@ svg {
   width: 1000%;
   height: 100%;
   background-color: hsla(0, 0%, 10%, .3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* for safari */
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Active link */
@@ -348,16 +357,175 @@ svg {
 
 
 /*=============== SKILLS ===============*/
+.skills{
+  background-color: var(--container-color);
+}
 
+.skills__container{
+  padding-bottom: 2rem;
+  row-gap: 3.5rem;
+}
+
+.skills__data{
+  text-align: center;
+}
+
+.skills__description{
+  margin-bottom: 2rem;
+}
+
+.skills__content,
+.skills__group{
+  display: grid;
+}
+
+.skills__content{
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.skills__group{
+  row-gap: 1rem;
+  list-style: decimal-leading-zero;
+}
+
+.skills__item{
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.skills__item::marker{
+  color: var(--first-color);
+}
 
 /*=============== SERVICES ===============*/
+.services__container{
+  row-gap: 2rem;
+  padding-block: 1rem;
+}
 
+
+.services__card{
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 3rem 1.25rem;
+  border-radius: 1rem;
+  border: 2px solid var(--container-color);
+  transition: border .4s;
+}
+
+.services__subtitle{
+  font-size: smaller;
+  margin-bottom: 1.5rem;
+}
+
+.services__icon{
+  display: block;
+  font-size: 2rem;
+  margin-bottom: .75rem;
+}
+
+.services__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.services__title span  {
+  color: var(--first-color);
+}
+
+.services__card:hover{
+  border: 2px solid var(--first-color);
+}
 
 /*=============== PROJECTS ===============*/
+.projects{
+  background-color: var(--container-color);
+}
 
+.projects__container{
+  row-gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.projects__card{
+  text-align: left;
+  background-color: hsl(228, 15%, 20%);
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 2px solid hsl(228, 15%, 20%);
+  transition: border .4s;
+  margin-top: 2rem;
+}
+
+.projects__icon{
+  color: var(--first-color);
+  font-size: 2rem;
+}
+
+.projects__button{
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: 3rem;
+  margin-left: 10rem;
+}
+
+.projects__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .75rem;
+  margin-top: .75rem;
+}
+
+.projects__card:hover{
+  border: 2px solid var(--first-color);
+}
 
 /*=============== CONTACT ===============*/
+.contact__container{
+  padding-top: 1rem;
+}
 
+.contact__form,
+.contact__group{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contract__form{
+  position: relative;
+}
+
+.contact__input{
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  background-color: var(--container-color);
+  color: var(--title-color);
+}
+
+.contact__input::placeholder{
+  color: var(--text-color);
+}
+
+.contact__form textarea{
+  height: 11rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+
+.contact__button{
+  justify-self: center;
+  cursor: pointer;
+}
+
+.contact__message{
+  position: absolute;
+  left: 0;
+  bottom: 4.5rem;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
 
 /*=============== FOOTER ===============*/
 
