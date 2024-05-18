@@ -59,13 +59,25 @@ const sendEmail = (e) =>{
 contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () =>{
-    const scrollUp = document.getElementById('scroll-up')
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+// const scrollUp = () =>{
+//     const scrollUp = document.getElementById('scroll-up')
+//     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll')
+// }
+// window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+   // reset: true //Animations repeat
+})
+
+sr.reveal('.home__data, .home__social, .footer__container')
+sr.reveal('about__image, .skills__content', {origin: 'right'})
+sr.reveal('about__data, .skills__data', {origin: 'left'})
+sr.reveal('services__card, .projects__card', {interval: 100})
